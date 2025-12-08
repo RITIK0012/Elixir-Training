@@ -1,9 +1,6 @@
 defmodule Tutorials do
-  @moduledoc """
-  Main module for our examples.
-  """
+  alias Tutorials.CentralTendency.Mean
 
-  def hello do
-    IO.puts("Hello, Elixir!")
-  end
+  defdelegate population_mean(numbers), to: Mean
+  defdelegate sample_mean(numbers), to: Mean
 end
